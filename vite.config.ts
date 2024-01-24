@@ -9,6 +9,11 @@ import { glob } from "glob";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), libInjectCss(), dts({ include: ["lib"] })],
+  css: {
+    modules: {
+      localsConvention: 'camelCase'
+    }
+  },
   build: {
     copyPublicDir: false,
     lib: {
