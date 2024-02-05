@@ -1,0 +1,109 @@
+/* @import url('../../../theme/colors.module.css'); */
+
+.layout {
+  display: flex;
+  width: 360px;
+  height: 360px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  transition: background-color, box-shadow 0.3s ease-out allow-discrete;
+}
+
+.outlinedCard {
+  composes: layout;
+  background-color: var(--md-ref-palette-neutral98);
+  border: 1px solid var(--md-ref-palette-neutral-variant80);
+}
+
+.outlinedCard:hover {
+  background-color: rgba(
+    25,
+    28,
+    30,
+    0.08
+  ); /* --md-ref-palette-neutral10 + 0.08 opacity */
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.elevatedCard {
+  composes: layout;
+  background: var(--md-ref-palette-neutral95);
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.elevatedCard:hover {
+  background-color: rgba(
+    25,
+    28,
+    30,
+    0.08
+  ); /* --md-ref-palette-neutral10 + 0.08 opacity */
+  box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.filledCard {
+  composes: layout;
+  background: var(--md-ref-palette-neutral90);
+}
+
+.filledCard:hover {
+  background-color: rgba(
+    25,
+    28,
+    30,
+    0.08
+  ); /* --md-ref-palette-neutral10 + 0.08 opacity */
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.outlinedCard:focus,
+.elevatedCard:focus,
+.filledCard:focus,
+.outlinedCard:active,
+.elevatedCard:active,
+.filledCard:active {
+  background-color: rgba(
+    25,
+    28,
+    30,
+    0.12
+  ); /* --md-ref-palette-neutral10 + 0.12 opacity */
+}
+
+.outlinedCard.dragged,
+.filledCard.dragged {
+  background-color: rgba(
+    25,
+    28,
+    30,
+    0.16
+  ); /* --md-ref-palette-neutral10 + 0.16 opacity */
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3),
+    0px 4px 8px 3px rgba(0, 0, 0, 0.15);
+}
+
+.elevatedCard.dragged {
+  background-color: rgba(
+    25,
+    28,
+    30,
+    0.16
+  ); /* --md-ref-palette-neutral10 + 0.16 opacity */
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3),
+    0px 6px 10px 4px rgba(0, 0, 0, 0.15);
+}
+
+.draggable {
+  cursor: grab;
+}
+
+.draggable:active,
+.draggedCard {
+  cursor: grabbing;
+}

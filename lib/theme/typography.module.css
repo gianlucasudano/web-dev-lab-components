@@ -1,6 +1,3 @@
-@import url(tokens.css);
-@import url(theme.light.css);
-
 .display-large{
   font-family: var(--md-sys-typescale-display-large-font-family-name);
   font-style: var(--md-sys-typescale-display-large-font-family-style);
