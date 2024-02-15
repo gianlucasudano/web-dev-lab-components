@@ -1,4 +1,4 @@
-/* @import url('../../../theme/colors.module.css'); */
+@import './main.css?inline';
 
 .layout {
   display: flex;
