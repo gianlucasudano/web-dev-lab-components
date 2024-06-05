@@ -11,13 +11,13 @@
   transition: background-color, box-shadow 0.3s ease-out allow-discrete;
 }
 
-.outlinedCard {
+.outlined {
   composes: layout;
   background-color: var(--md-ref-palette-neutral98);
   border: 1px solid var(--md-ref-palette-neutral-variant80);
 }
 
-.outlinedCard:hover {
+.outlined:hover {
   background-color: rgba(
     25,
     28,
@@ -28,14 +28,14 @@
     0px 1px 2px 0px rgba(0, 0, 0, 0.3);
 }
 
-.elevatedCard {
+.elevated {
   composes: layout;
   background: var(--md-ref-palette-neutral95);
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15),
     0px 1px 2px 0px rgba(0, 0, 0, 0.3);
 }
 
-.elevatedCard:hover {
+.elevated:hover {
   background-color: rgba(
     25,
     28,
@@ -46,12 +46,12 @@
     0px 1px 2px 0px rgba(0, 0, 0, 0.3);
 }
 
-.filledCard {
+.filled {
   composes: layout;
   background: var(--md-ref-palette-neutral90);
 }
 
-.filledCard:hover {
+.filled:hover {
   background-color: rgba(
     25,
     28,
@@ -62,12 +62,12 @@
     0px 1px 2px 0px rgba(0, 0, 0, 0.3);
 }
 
-.outlinedCard:focus,
-.elevatedCard:focus,
-.filledCard:focus,
-.outlinedCard:active,
-.elevatedCard:active,
-.filledCard:active {
+.outlined:focus,
+.elevated:focus,
+.filled:focus,
+.outlined:active,
+.elevated:active,
+.filled:active {
   background-color: rgba(
     25,
     28,
@@ -76,8 +76,8 @@
   ); /* --md-ref-palette-neutral10 + 0.12 opacity */
 }
 
-.outlinedCard.dragged,
-.filledCard.dragged {
+.outlined.dragged,
+.filled.dragged {
   background-color: rgba(
     25,
     28,
@@ -88,7 +88,7 @@
     0px 4px 8px 3px rgba(0, 0, 0, 0.15);
 }
 
-.elevatedCard.dragged {
+.elevated.dragged {
   background-color: rgba(
     25,
     28,
@@ -104,6 +104,6 @@
 }
 
 .draggable:active,
-.draggedCard {
+.dragged {
   cursor: grabbing;
 }
